@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function tablaMultiplicar(){
+
+        var numero = prompt("Ingrese Número");
+
+        document.write("<center><table border='1px'>");
+        document.write("<p><font size='5'>Tabla de Multiplicar</font></p>");
+
+        for(var i = 1; i<13; i++){
+            
+            document.write("<tr style='height:40px'>");
+            result = i*numero;
+            document.write("<td style='width:40px'><center><font size='5'>" + numero + "</center></font></td>");
+            document.write("<td style='width:40px'><center><font size='5'>" + "x" + "</center></font></td>");
+            document.write("<td style='width:40px'><center><font size='5'>" + i + "</center></font></td>");
+            document.write("<td style='width:40px'><center><font size='5'>" + "=" + "</center></font></td>");
+            document.write("<td style='width:40px'><center><font size='5'>" + result + "</center></font></td>");
+
+            document.write("</tr>");
+        }
+
+        document.write("</table></center>");
+    }
+
+    tablaMultiplicar();
+</script>
+
+<body>
+
+</body>
+</html>

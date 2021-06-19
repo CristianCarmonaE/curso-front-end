@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="validaciones.js"></script>
+    <style>
+        .carruselImg{
+            width: 600px;
+            height: 600px;
+        }
+        .carousel-resize{ 
+            width:100%; height:570px; 
+        }
+
+    </style>
+
+</head>
+<body background="https://image.freepik.com/vector-gratis/fondo-patron-huesos-huellas_1374-18.jpg" style="background-size: 100% auto;">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="inicio">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Shoapino</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Ingresar</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn" onclick="mostrarTotal()">Carrito</a>
+              </li>
+            </ul>  
+          </div>
+        </div>
+    </nav>
+    <br>
+
+    <center>
+    <div class="container" style="width: 500px; height: 40px;">
+        <div id="mostrarTotal" style="padding: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+        </div>
+    </div>
+    </center>
+    <br>
+    <br>
+  <div class="container">
+    <div class="content row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6 justify-content-md-center">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active carousel-resize">
+              <img src="https://befoods.cl/wp-content/uploads/2019/01/7804438003069.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item carousel-resize">
+              <img src="https://befoods.cl/wp-content/uploads/2019/01/7791416001325.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item carousel-resize">
+              <img src="https://m.media-amazon.com/images/I/41mzZPVWk9L._SL500_._SS600_.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <br>
+    <div class="card" id="productos">
+      <div class="card-header">
+        <div class="row content">
+          <div class="col-sm-8">
+              Productos
+          </div>
+          <div class="col-sm-4">
+              <select class="form-select form-select-ms mb-1" aria-label=".form-select-lg example">
+                  <option selected>Buscar</option>
+                  <option value="1">Comida</option>
+                  <option value="2">Juguetes</option>
+                  <option value="3">Varios</option>
+              </select>
+          </div>
+      </div>
+      </div>
+      <div class="card-body">
+        <div class="row content">
+          <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://m.media-amazon.com/images/I/41mzZPVWk9L._SL500_._SS600_.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Juguete interactivo</h5>
+                      <p class="card-text">Juguetería
+                      </p>
+                      <p>Bajo nivel de ruido y carcasa desmontable</p>
+                      <h5>$20.000</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(20000);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://ae01.alicdn.com/kf/HTB1WFRZesIrBKNjSZK9q6ygoVXaC/Juguetes-de-TPR-para-perro-grande-chupete-de-caucho-interactivo-para-la-salud-del-osito-cachorro.jpg_q50.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Jugete para perro grande</h5>
+                      <p class="card-text">Juguetería</p>
+                      <p>Ultra-resistente para mayor duración</p>
+                      <h5>$15.000</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(15000);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://befoods.cl/wp-content/uploads/2019/01/7791416002247.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Alimento Raza</h5>
+                      <p class="card-text">Alimentos</p>
+                      <p>Para perros adultos 21Kg. Con Omega 3 y 6</p>
+                      <h5>$56.000</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(56000);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-sm-4" style="margin-top: 20px;">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://distribuidorasanjose.cl/wp-content/uploads/2020/08/Fit-Cachorro-10Kg.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Alimento Premium Fit</h5>
+                      <p class="card-text">Alimentos</p>
+                      <p>Para cachorros. 10Kg.</p>
+                      <h5>$60.000</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(60000);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4" style="margin-top: 20px;">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://img.joomcdn.net/d140bec8da56dc481811cbe2668064696a43c590_original.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Bola de Hámster</h5>
+                      <p class="card-text">Juguetería
+                      </p>
+                      <p>Lleve 3 por el precio de 2</p>
+                      <h5>$15.990</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(15990);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4" style="margin-top: 20px;">
+              <div class="card" style="width: 18rem;">
+                  <img src="https://st2.depositphotos.com/3562409/7303/i/600/depositphotos_73036425-stock-photo-hamster-wheel.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Rueda de Hámster</h5>
+                      <p class="card-text">Juguetería
+                      </p>
+                      <p>Anti-oxidable</p>
+                      <h5>$9.990</h5>
+                      <a class="btn btn-primary" onclick="sumarCarrito(9990);alert('Producto Agregado');">Agregar carrito</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center text-lg-start border border-light">
+      <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Tienda Shoapino</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                voluptatem veniam, est atque cumque eum delectus sint!
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Centro de Ayuda</h5>
+      
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Información de pago</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Servicio al Cliente</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Metodos de entrega y cobertura</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Nuestros Locales</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0">Informaciones y Políticas</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="text-black">Terminos y condiciones</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Bases Legales</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Preguntas Frecuentes</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Club</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Mario Hugo Copyright
+          <a class="text-white" href="#inicio">Inicio</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

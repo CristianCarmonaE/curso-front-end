@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formativa 1.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="validar-form.js"></script>
+</head>
+<style>
+    .fondo{
+        background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); 
+    }
+    .notas{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .aprobado{
+       background: linear-gradient(to top, #134e5e, #71b280);
+    }
+    .reprobado{
+        background: linear-gradient(to bottom, #EB5757,#000000);
+    }
+</style>
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row content justify-content-md-center">
+            <div class="col-sm-5 border border-primary fondo" style="padding: 10px; margin: 5px;">
+                <form>
+                    <div class="mb-2">
+                        <label for="nota1" class="form-label notas">Nota 1</label>
+                        <input type="number" class="form-control" id="nota1">
+                        <div class="col-sm-6" id="errorNota1">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nota2" class="form-label notas">Nota 2</label>
+                        <input type="number" class="form-control" id="nota2">
+                        <div class="col-sm-6" id="errorNota2">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nota3" class="form-label notas">Nota 3</label>
+                        <input type="number" class="form-control" id="nota3">
+                        <div class="col-sm-6" id="errorNota3">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nota4" class="form-label notas">Nota 4</label>
+                        <input type="number" class="form-control" id="nota4">
+                        <div class="col-sm-6" id="errorNota4">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="notaexamen" class="form-label notas">Nota Examen</label>
+                        <input type="number" class="form-control" id="notaexamen">
+                        <div class="col-sm-6" id="errorExamen">
+                        </div>
+                    </div>
+
+                    <input type="button" class="btn btn-success" id="botonvalidar" value="Calcular" onclick="validar();">
+                    <input type="reset" class="btn btn-secondary" id="botonlimpiar" value="Limpiar" onclick="limpiar();">
+                </form>
+            </div>
+
+            <div class="col-sm-5 border border-primary fondo notas" style="margin: 5px; padding: 10px; padding-top: 20px;" id="respuesta">
+                
+                <div class="container row" style="height: 30px;">
+                    <div class="col-sm-6">Estado: </div>
+                    <div class="col-sm-6" id="condicionfinal"></div>
+                </div>
+                <hr>
+                <div class="container row" style="height: 30px;">
+                    <div class="col-sm-6">Promedio Parcial: </div>
+                    <div class="col-sm-6" id="promparcial"></div>
+                </div>
+                <hr>
+                <div class="container row" style="height: 30px;">
+                    <div class="col-sm-6">Nota Examen: </div>
+                    <div class="col-sm-6" id="mostrarexamen"></div>
+                </div>
+                <hr>
+                <div class="container row" style="height: 30px;">
+                    <div class="col-sm-6">Ponderación Final: </div>
+                    <div class="col-sm-6" id="promediofinal"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

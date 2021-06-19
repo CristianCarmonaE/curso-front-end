@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="validaciones.js"></script>
+    <style>
+        .carruselImg{
+            width: 600px;
+            height: 600px;
+        }
+        .carousel-resize{ 
+            width:100%; height:570px; 
+        }
+        .fondo{
+        background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); 
+        }
+
+    </style>
+
+</head>
+<body background="https://mymodernmet.com/wp/wp-content/uploads/2020/04/free-zoom-background-10.jpg">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Shoapino</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Ingresar</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="container">
+        <div class="row content justify-content-md-center">
+            <div class="col-sm-5 border border-primary fondo" style="padding: 10px; margin: 5px;">
+                <form>
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label notas">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                        <div class="col-sm-6" id="errorNombre">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="apellido" class="form-label notas">Apellido</label>
+                        <input type="text" class="form-control" id="apellido">
+                        <div class="col-sm-6" id="errorApellido">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="rut" class="form-label notas">Rut</label>
+                        <input type="text" class="form-control" id="rut">
+                        <div class="col-sm-6" id="errorRut">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="email" class="form-label notas">Email</label>
+                        <input type="text" class="form-control" id="email">
+                        <div class="col-sm-6" id="errorEmail">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="password" class="form-label notas">Contraseña</label>
+                        <input type="password" class="form-control" id="password">
+                        <div class="col-sm-6" id="errorContraseña">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="confirmarpassword" class="form-label notas">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="confirmarpassword">
+                        <div class="col-sm-6" id="errorConfirmacion">
+                        </div>
+                    </div>
+
+                    <input type="button" class="btn btn-success" id="botonvalidar" value="Registrase" onclick="validar();">
+                    <input type="reset" class="btn btn-secondary" id="botonlimpiar" value="Limpiar" onclick="limpiar();">
+                </form>
+            </div>
+        </div>
+    </div>
+     
+
+
+    <footer class="bg-dark text-white text-center text-lg-start border border-light">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Tienda Shoapino</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                voluptatem veniam, est atque cumque eum delectus sint!
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Centro de Ayuda</h5>
+      
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Información de pago</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Servicio al Cliente</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Metodos de entrega y cobertura</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Nuestros Locales</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0">Informaciones y Políticas</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="text-black">Terminos y condiciones</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Bases Legales</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Preguntas Frecuentes</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Club</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Mario Hugo Copyright
+          <a class="text-white" href="index.html">Inicio</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
